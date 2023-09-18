@@ -1,0 +1,35 @@
+/*
+Algorithm:
+  + process command line
+  + read input data
+    + read rules for logic transformation
+    + read library modules from include files
+    + read previously generated modules from generated file
+    + read circuit modules from input files
+    + read parameters of modules
+  + calculate hierarchy
+    + calculate modules hierarchy
+    + calculate instances hierarchy
+  + calc topmost module
+  + calc rail structure of the circuit
+    + tag all ports as DR_SP0
+    + tag specified ports as DR_SP1
+    + tag specified ports as SR
+    + expand SR ports
+  + generate wrapper to interface single-rail environment
+  + process advanced options for original circuit
+    + output statistics into statistics file
+    + output wires into wires file
+  + convert data
+    + apply negative logic optimisation
+    + convert circuit into DR
+    + optimise spacer converters
+    + add CD
+    + simplify circuit
+  + process advanced options for modified circuit
+    + output statistics into statistics file
+    + output wires for into wires file
+  + write generated modules into gen file
+  + write circuit modules into output file
+  + clean up
+*/
