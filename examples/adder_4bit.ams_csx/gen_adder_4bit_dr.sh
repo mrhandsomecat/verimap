@@ -4,5 +4,5 @@ rm -f ams_dr-gen.v
 -a ams.asn -r ams.rls -p ams.prm,ams.rti -g ams_dr-gen.v \
 -i ams.v,ams_sr-misc.v,ams_sr-c.v,ams_dr-cl.v,ams_adr-cnv.v,ams_adr-df_ta_clk2.v \
 -o adder_4bit_dr.v adder_4bit_sr.v \
--ol3 -tl2 -as -op area,transistor_number \
+-ol3 -tl3 -as -op area,transistor_number \
 -clk *.clk -rst *.rst -ra1
