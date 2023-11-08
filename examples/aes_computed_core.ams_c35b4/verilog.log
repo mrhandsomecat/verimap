@@ -1,0 +1,212 @@
+Host command: /cad/2001/IC/LDV_3.1/tools/verilog/bin/verilog.exe
+Command arguments:
+    aes_core_sd_enc_testbench.v
+    aes_core_syn_dr.v
+    ams_dr-cl.v
+    ams_dr-gen.v
+    ams_sr-misc.v
+    ams_adr-df_ta_clk2.v
+    ams_adr-xdf_clk2.v
+    ams_adr-cnv.v
+    -f vxl.inc
+        -v /export/home/cadence/HitKit_2003/ams_v3.50/verilog/c35b4/c35_CORELIB.v
+        -v /export/home/cadence/HitKit_2003/ams_v3.50/verilog/udp.v
+        +sdf_nocheck_celltype
+    +libext+.v+.V
+
+VERILOG-XL 3.10.p001 log file created Aug 25, 2004  16:40:17
+VERILOG-XL 3.10.p001   Aug 25, 2004  16:40:17
+
+Copyright (c) 1995 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+For quick reference of Cadence's Verilog-XL product command line options
+Please look at the html page <instal_path>/tools/verilog/doc/index.html 
+in a web browser
+
+Compiling source file "aes_core_sd_enc_testbench.v"
+Compiling included source file "timescale.v"
+Continuing compilation of source file "aes_core_sd_enc_testbench.v"
+Compiling included source file "aes_vectors.v"
+Continuing compilation of source file "aes_core_sd_enc_testbench.v"
+Compiling source file "aes_core_syn_dr.v"
+Compiling source file "ams_dr-cl.v"
+Compiling source file "ams_dr-gen.v"
+Compiling source file "ams_sr-misc.v"
+Compiling source file "ams_adr-df_ta_clk2.v"
+Compiling source file "ams_adr-xdf_clk2.v"
+Compiling source file "ams_adr-cnv.v"
+Scanning library file "/export/home/cadence/HitKit_2003/ams_v3.50/verilog/c35b4/c35_CORELIB.v"
+
+Warning!  Library file "/export/home/cadence/HitKit_2003/am                    
+          s_v3.50/verilog/udp.v" was specified but not                         
+          needed.                                           [Verilog-LFSNN]    
+          "/export/home/cadence/HitKit_2003/ams_v3.50/veril                    
+          og/c35b4/c35_CORELIB.v", 6332: 
+Highest level modules:
+testbench
+spinv8_ndr
+or_ndr
+ADD21_ndr
+ADD31_pdr
+ADD32_pdr
+IMUX24_pdr
+IMUX24_ndr
+IMUX30_pdr
+IMUX30_ndr
+IMUX31_pdr
+IMUX31_ndr
+IMUX32_pdr
+IMUX32_ndr
+IMUX33_pdr
+IMUX33_ndr
+IMUX40_pdr
+IMUX40_ndr
+IMUX41_pdr
+IMUX41_ndr
+IMUX42_pdr
+IMUX42_ndr
+MUX26_pdr
+MUX26_ndr
+MUX31_pdr
+MUX31_ndr
+MUX32_pdr
+MUX32_ndr
+MUX33_pdr
+MUX33_ndr
+MUX34_pdr
+MUX34_ndr
+MUX41_pdr
+MUX41_ndr
+MUX42_pdr
+MUX42_ndr
+MUX43_pdr
+MUX43_ndr
+XNR22_pdr
+XNR22_ndr
+XNR31_pdr
+XNR31_ndr
+XNR40_pdr
+XNR40_ndr
+XNR41_pdr
+XNR41_ndr
+XOR22_pdr
+XOR41_pdr
+XOR41_ndr
+empty
+spinv0
+spinv1
+spinv2
+spinv3
+spinv4
+spinv6
+spinv8
+TIE0_1dr
+TIE1_1dr
+DFS1_0dr
+DFS3_0dr
+DFSC1_0dr
+DFSC3_0dr
+DFSCP1_0dr
+DFSCP3_0dr
+DFSP1_0dr
+DFSP3_0dr
+SR2DR_1dr
+DR2SR_1dr
+
+   *** SDF Annotator version 2.3.3
+   *** SDF Interface version 5.5.1
+   ***    SDF file:  aes_core_syn_sd.sdf
+   ***    Back-annotation scope:  testbench.x
+   ***    No configuration file specified - using default options
+   ***    SDF Annotator log file:  aes_core_syn_sd.sdf.log
+   ***    MTM selection parameter specified: TOOL_CONTROL
+
+   ***    SCALE FACTORS parameter specified: 1.000000:1.000000:1.000000
+
+   ***    SCALE TYPE parameter specified: FROM_MTM
+
+          Configuring for back-annotation...
+
+          Reading SDF file and back-annotating timing data...
+
+
+*** SDF back-annotation successfully completed
+
+Test 0: in=f34481ec3cc627bacd5dc3fb08f273e6 key=00000000000000000000000000000000
+  XP: 0336763e966d92595a567cc9ce537f5e
+  SD: 0336763e966d92595a567cc9ce537f5e
+Test 1: in=9798c4640bad75c7c3227db910174e72 key=00000000000000000000000000000000
+  XP: a9a1631bf4996954ebc093957b234589
+  SD: a9a1631bf4996954ebc093957b234589
+Test 2: in=96ab5c2ff612d9dfaae8c31f30c42168 key=00000000000000000000000000000000
+  XP: ff4f8391a6a40ca5b25d23bedd44a597
+  SD: ff4f8391a6a40ca5b25d23bedd44a597
+Test 3: in=6a118a874519e64e9963798a503f1d35 key=00000000000000000000000000000000
+  XP: dc43be40be0e53712f7e2bf5ca707209
+  SD: dc43be40be0e53712f7e2bf5ca707209
+Test 4: in=cb9fceec81286ca3e989bd979b0cb284 key=00000000000000000000000000000000
+  XP: 92beedab1895a94faa69b632e5cc47ce
+  SD: 92beedab1895a94faa69b632e5cc47ce
+Test 5: in=b26aeb1874e47ca8358ff22378f09144 key=00000000000000000000000000000000
+  XP: 459264f4798f6a78bacb89c15ed3d601
+  SD: 459264f4798f6a78bacb89c15ed3d601
+Test 6: in=58c8e00b2631686d54eab84b91f0aca1 key=00000000000000000000000000000000
+  XP: 08a4e2efec8a8e3312ca7460b9040bbf
+  SD: 08a4e2efec8a8e3312ca7460b9040bbf
+Test 7: in=00000000000000000000000000000000 key=10a58869d74be5a374cf867cfb473859
+  XP: 6d251e6944b051e04eaa6fb4dbf78465
+  SD: 6d251e6944b051e04eaa6fb4dbf78465
+Test 8: in=00000000000000000000000000000000 key=caea65cdbb75e9169ecd22ebe6e54675
+  XP: 6e29201190152df4ee058139def610bb
+  SD: 6e29201190152df4ee058139def610bb
+Test 9: in=00000000000000000000000000000000 key=a2e2fa9baf7d20822ca9f0542f764a41
+  XP: c3b44b95d9d2f25670eee9a0de099fa3
+  SD: c3b44b95d9d2f25670eee9a0de099fa3
+Test 10: in=00000000000000000000000000000000 key=b6364ac4e1de1e285eaf144a2415f7a0
+  XP: 5d9b05578fc944b3cf1ccf0e746cd581
+  SD: 5d9b05578fc944b3cf1ccf0e746cd581
+Test 11: in=00000000000000000000000000000000 key=64cf9c7abc50b888af65f49d521944b2
+  XP: f7efc89d5dba578104016ce5ad659c05
+  SD: f7efc89d5dba578104016ce5ad659c05
+Test 12: in=00000000000000000000000000000000 key=47d6742eefcc0465dc96355e851b64d9
+  XP: 0306194f666d183624aa230a8b264ae7
+  SD: 0306194f666d183624aa230a8b264ae7
+Test 13: in=00000000000000000000000000000000 key=3eb39790678c56bee34bbcdeccf6cdb5
+  XP: 858075d536d79ccee571f7d7204b1f67
+  SD: 858075d536d79ccee571f7d7204b1f67
+Test 14: in=00000000000000000000000000000000 key=64110a924f0743d500ccadae72c13427
+  XP: 35870c6a57e9e92314bcb8087cde72ce
+  SD: 35870c6a57e9e92314bcb8087cde72ce
+VERILOG interrupt at time 47020000
+Type ? for help
+C1 > $finish;
+C1: $finish at simulation time 47020000
+1 warning
+0 simulation events (use +profile or +listcounts option to count) + 95952944 accelerated events
+CPU time: 0.4 secs to compile + 3.4 secs to link + 79.2 secs in simulation
+End of VERILOG-XL 3.10.p001   Aug 25, 2004  16:41:46

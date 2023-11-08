@@ -1,0 +1,136 @@
+/*
+Rules for Combinational Logic transformation into Positive Dual-Rail logic (not inverting spacer) or Negative Dual-Rail logic (inverting spacer)
+SR             DR             positive       positivr       negative       negative       input-output
+logic          logic          direct         complement     direct         complement     polarity and   flags 
+prefix         prefix         prefix         prefix         prefix         prefix         rail number    FF CD P|0 N|1  description
++[DRV]         +[DRV]_[p|n]dr +[DRV]        +[DRV]          +[DRV]         +[DRV]         [pnsdcPNSDC]   [y|n]
+*/
+
+ADD2           ADD2           _              _              _              _              ppPP           nnny           // Half-Adder (12x)
+ADD3           ADD3           _              _              _              _              pppPP          nnyn           // Full Adder (12x)
+
+AOI21          AOI21          _              _              AOI21          OAI21          pppN           nyny           // 2-Input AND into 2-Input NOR (012x)
+AOI211         AOI211         _              _              AOI211         OAI211         ppppN          nyny           // 2-Input AND into 3-Input NOR (012x)
+AOI22          AOI22          _              _              AOI22          OAI22          ppppN          nyny           // 2x2-Input AND into 2-Input NOR (012x)
+AOI31          AOI31          _              _              AOI31          OAI31          ppppN          nyny           // 3-Input AND into 2-Input NOR (012x)
+
+BT1            BT1            _              _              _              _              ppP            nnnn           // Tri-State Buffer with active high enable (12348x)
+BT2            BT2            _              _              _              _              ppP            nnnn           // Tri-State Buffer with active low enable (12348x)
+
+BUFE           BUFE           _              _              _              _              ppP            nnnn           // Tri-State Buffer with active high enable (2468ACFx)
+BUFT           BUFT           _              _              _              _              ppP            nnnn           // Tri-State Buffer with active low enable (2468ACFx)
+BUF            BUF            BUF            BUF            INV            INV            pP             nnyy           // Buffer (2468CFx)
+BUSHD          BUSHD          _              _              _              _              pP             nnnn           // Busholder
+
+CLKBU          CLKBU          CLKBU          CLKBU          CLKIN          CLKIN          pP             nnyy           // Symmetrical Buffer for clock tree synthesis (2468CFx)
+CLKIN          CLKIN          _              _              CLKIN          CLKIN          pN             nnny           // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+
+DF             DF             _              _              _              _              ppPNsdDDr      ynyn           // D-Type Flip Flop (13x)
+DFC            DFC            _              _              _              _              ppPNnsdDDs     ynyn           // D-Type Flip Flop with active low clear (13x)
+DFCP           DFCP           _              _              _              _              ppPNnnsdDDss   ynyn           // D-Type Flip Flop with active low clear and preset (13x)
+DFP            DFP            _              _              _              _              ppPNnsdDDs     ynyn           // D-Type Flip Flop with active low preset (13x)
+DFS            DFS            _              _              _              _              ppPNppsdDDdd   ynyn           // Scan D-Type Flip Flop (13x)
+DFSC           DFSC           _              _              _              _              ppPNnppsdDDsdd ynyn           // Scan D-Type Flip Flop with active low clear (13x)
+DFSCP          DFSCP          _              _              _              _            ppPNnppnsdDDsdds ynyn           // Scan D-Type Flip Flop with active low clear and preset (13x)
+DFSP           DFSP           _              _              _              _              ppPNppnsdDDdds ynyn           // Scan D-Type Flip Flop with active low preset (13x)
+
+DFE            DFE            _              _              _              _              ppPNsdDDr      ynnn           // D-Type Flip Flop with active high enable (13x)
+DFEC           DFEC           _              _              _              _              ppPNsdDDr      ynnn           // D-Type Flip Flop with active high enable and active low clear (13x)
+DFECP          DFECP          _              _              _              _              ppPNsdDDr      ynnn           // D-Type Flip Flop with active high enable, active low clear and preset (13x)
+DFEP           DFEP           _              _              _              _              ppPNsdDDr      ynnn           // D-Type Flip Flop with active high enable and active low preset (13x)
+DFSE           DFSE           _              _              _              _              ppPNsdDDr      ynnn           // Scan D-Type Flip Flop with active high enable (13x)
+DFSEC          DFSEC          _              _              _              _              ppPNsdDDr      ynnn           // Scan D-Type Flip Flop with active high enable and active low clear (13x)
+DFSECP         DFSECP         _              _              _              _              ppPNsdDDr      ynnn           // Scan D-Type Flip Flop with active high enable, active low clear and preset (13x)
+DFSEP          DFSEP          _              _              _              _              ppPNsdDDr      ynnn           // Scan D-Type Flip Flop with active high enable and active low preset (13x)
+
+DL8            DL8            _              _              _              _              pnPNdsDD       ynnn           // Data Latch (124x)
+DL8Z           DL8Z           _              _              _              _              pnnPddsD       ynnn           // Data Latch with Tristate Output (124x)
+DL9            DL9            _              _              _              _              pnPNndsDDs     ynnn           // Data Latch with Set (124x)
+DLA            DLA            _              _              _              _              pnPNndsDDs     ynnn           // Data Latch with Reset (124x)
+DLB            DLB            _              _              _              _              pnPNnndsDDss   ynnn           // Data Latch with Set and Reset (124x)
+
+DL             DL             _              _              _              _              pnPNdsDD       ynnn           // Data Latch (13x)
+DLC            DLC            _              _              _              _              pnPNndsDDs     ynnn           // Data Latch with active low clear (13x)
+DLCP           DLCP           _              _              _              _              pnPNnndsDDss   ynnn           // Data Latch with active low clear and preset (13x)
+DLP            DLP            _              _              _              _              pnPNndsDDs     ynnn           // Data Latch with active low preset (13x)
+DLQ            DLQ            _              _              _              _              pnPdsD         ynnn           // Data Latch with Q-output only (13x)
+DLCQ           DLCQ           _              _              _              _              pnPndsDs       ynnn           // Data Latch with Q-output only and active low clear (13x)
+DLCPQ          DLCPQ          _              _              _              _              pnPnndsDss     ynnn           // Data Latch with Q-output only, active low clear and preset (13x)
+DLPQ           DLPQ           _              _              _              _              pnPndsDs       ynnn           // Data Latch with Q-output only and active low preset (13x)
+
+DLY1           DLY1           _              _              _              _              pP             nnnn           // Single Delay (2x)
+DLY2           DLY2           _              _              _              _              pP             nnnn           // Double Delay (2x)
+DLY3           DLY3           _              _              _              _              pP             nnnn           // Triple Delay (2x) 
+DLY4           DLY4           _              _              _              _              pP             nnnn           // Quadr. Delay (2x)
+
+IMAJ3          IMAJ3          _              _              _              _              pppN           nnnn           // Inverting Majority ~(AB+AC+BC), (01x)
+
+IMUX2          IMUX2          _              _              _              _              pppN           nyyy           // Inverting 2:1 Multiplexer (01234x)
+IMUX3          IMUX3          _              _              _              _              pppppN         nyyy           // Inverting 3:1 Multiplexer (0123x)
+IMUX4          IMUX4          _              _              _              _              ppppppN        nyyy           // Inverting 4:1 Multiplexer (012x)
+
+INV            INV            _              _              INV            INV            pN             nnny           // Inverter (0123468ACFx)
+
+JK9            JK9            _              _              _              _              pppPNnddsDDs   ynnn           // JK Flip-Flop with Set (124x)
+JKA            JKA            _              _              _              _              pppPNnddsDDs   ynnn           // JK Flip-Flop with Reset (124x)
+JKS9           JKS9           _              _              _              _            pppPNppnddsDDdds ynnn           // Scan JK Flip-Flop with Set (124x)
+JKSA           JKSA           _              _              _              _            pppPNppnddsDDdds ynnn           // JK Flip-Flop with Reset (124x)
+
+JK             JK             _              _              _              _              pppPNnddsDDs   ynnn           // JK Flip-Flop (13x)
+JKC            JKC            _              _              _              _              pppPNnddsDDs   ynnn           // JK Flip-Flop with active low clear (13x)
+JKCP           JKCP           _              _              _              _              pppPNnddsDDs   ynnn           // JK Flip-Flop with active low clear and preset (13x)
+JKP            JKP            _              _              _              _              pppPNnddsDDs   ynnn           // JK Flip-Flop with active low preset (13x)
+JKS            JKS            _              _              _              _            pppPNppnddsDDdds ynnn           // Scan JK Flip-Flop (13x)
+JKSC           JKSC           _              _              _              _            pppPNppnddsDDdds ynnn           // Scan JK Flip-Flop with active low clear (13x)
+JKSCP          JKSCP          _              _              _              _            pppPNppnddsDDdds ynnn           // Scan JK Flip-Flop with active low clear and preset (13x)
+JKSP           JKSP           _              _              _              _            pppPNppnddsDDdds ynnn           // Scan JK Flip-Flop with active low preset (13x)
+
+TIE0           TIE0           _              _              _              _              pPcr           ynyy           // Tie-Down to logic Low level
+TIE1           TIE1           _              _              _              _              pPcr           ynyy           // Tie-Up to logic High Level
+
+MAJ3           MAJ3           _              _              _              _              pppP           nnnn           // Majority (AB+AC+BC), (12x)
+
+MUX2           MUX2           _              _              _              _              pppP           nyyy           // 2:1 Multiplexer (1246x)
+MUX3           MUX3           _              _              _              _              pppppP         nyyy           // 3:1 Multiplexer (1234x)
+MUX4           MUX4           _              _              _              _              ppppppP        nyyy           // 4:1 Multiplexer (123x)
+
+NAND2          NAND2          _              _              NAND2          NOR2           ppN            nyny           // 2-Input NAND (0123468x)
+NAND3          NAND3          _              _              NAND3          NOR3           pppN           nyny           // 3-Input NAND (01234x)
+NAND4          NAND4          _              _              NAND4          NOR4           ppppN          nyny           // 4-Input NAND (0123x)
+
+NOR2           NOR2           _              _              NOR2           NAND2          ppN            nyny           // 2-Input NOR (01234x)
+NOR3           NOR3           _              _              NOR3           NAND3          pppN           nyny           // 3-Input NOR (0123x)
+NOR4           NOR4           _              _              NOR4           NAND4          ppppN          nyny           // 3-Input NOR (012x)
+
+OAI21          OAI21          _              _              OAI21          AOI21          pppN           nyny           // 2-Input OR into 2-Input NAND (012x)
+OAI211         OAI211         _              _              OAI211         AOI211         ppppN          nyny           // 2-Input OR into 3-Input NAND (012x)
+OAI22          OAI22          _              _              OAI22          AOI22          ppppN          nyny           // 2x2-Input OR into 2-Input NAND (012x)
+OAI31          OAI31          _              _              OAI31          AOI31          ppppN          nyny           // 3-Input OR into 2-Input NAND (012x)
+
+TFEC           TFEC           _              _              _              _              pP             nnnn           // Toggle Flip Flop with active high enable and active low clear (13x)
+TFECP          TFECP          _              _              _              _              pP             nnnn           // Toggle Flip Flop with active high enable, active low clear and preset (13x)
+TFEP           TFEP           _              _              _              _              pP             nnnn           // Toggle Flip Flop with active high enable and active low preset (13x)
+TFSEC          TFSEC          _              _              _              _              pP             nnnn           // Scan Toggle Flip Flop with active high enable and active low clear (13x)
+TFSECP         TFSECP         _              _              _              _              pP             nnnn           // Scan Toggle Flip Flop with active high enable, active low clear and preset (13x)
+TFSEP          TFSEP          _              _              _              _              pP             nnnn           // Scan Toggle Flip Flop with active high enable and active low preset (13x)
+TFC            TFC            _              _              _              _              pP             nnnn           // Toggle Flip Flop with active low clear (13x)
+TFCP           TFCP           _              _              _              _              pP             nnnn           // Toggle Flip Flop with active low clear and preset (13x)
+TFP            TFP            _              _              _              _              pP             nnnn           // Toggle Flip Flop with active low preset (13x)
+TFSC           TFSC           _              _              _              _              pP             nnnn           // Scan Toggle Flip Flop with active low clear (13x)
+TFSCP          TFSCP          _              _              _              _              pP             nnnn           // Scan Toggle Flip Flop with active low clear and preset (13x)
+TFSP           TFSP           _              _              _              _              pP             nnnn           // Scan Toggle Flip Flop with active low preset (13x)
+
+XOR2           XOR2           _              _              _              _              ppP            nnyy           // 2-input XOR (012x)
+XOR3           XOR3           _              _              _              _              pppP           nnyy           // 3-input XOR (01x)
+XOR4           XOR4           _              _              _              _              ppppP          nnyy           // 4-input XOR (01x)
+
+XNR2           XNR2           _              _              _              _              ppN            nnyy           // 2-input XNOR (012x)
+XNR3           XNR3           _              _              _              _              pppN           nnyy           // 3-input XNOR (01x)
+XNR4           XNR4           _              _              _              _              ppppN          nnyy           // 4-input XNOR (01x)
+
+empty          empty          BUF            BUF            _              _              pP             nnyn           // Empty module connecting input to output
+
+spinv          spinv          _              _              INV            INV            pP             nnny           // Spacer Inverter (12348x)
+
+SR2DR          SR2DR          _              _              _              _              ppPNssSS       ynyy           // SR2DR
+DR2SR          DR2SR          _              _              _              _              pnPssS         ynyy           // DR2SR

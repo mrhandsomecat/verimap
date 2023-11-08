@@ -1,0 +1,11 @@
+ReadGCFTimingLibraries csx3.3V.gcf
+ReadVerilog aes_core_syn_dr.v
+ReadVerilog ams_dr-cl.v
+ReadVerilog ams_dr-gen.v
+ReadVerilog ams_sr-misc.v
+ReadVerilog ams_adr-df_tri_clk2.v
+ReadVerilog ams_adr-xdf_clk2.v
+ReadVerilog ams_adr-cnv_tri.v
+TopLevelCell core_0dr
+WriteSDFDelays aes_core_syn_dr.sdf
+quit

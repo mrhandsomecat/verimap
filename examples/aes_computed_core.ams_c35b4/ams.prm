@@ -1,0 +1,341 @@
+// The list of module parameters
+
+[
+gate_delay,           // gate delay in "simple negative gate" number
+negative_gate_number, // number of negative gates
+invertor_number,      // number of invertors
+flip_flop_number,     // number of flip-flops
+transistor_number,    // number of transistors
+area                  // area of the module in square microns
+]
+
+/*
+Table of module parameters
+
+module        module                module
+name          parameters            description
+*/
+
+ADD21         1,1,0,0,0,143         // Half-Adder (12x)
+ADD22         1,1,0,0,0,146         // Half-Adder (12x)
+
+ADD31         1,1,0,0,0,273         // Full Adder (12x)
+ADD32         1,1,0,0,0,273         // Full Adder (12x)
+
+AOI210        1,1,0,0,0,73         // 2-Input AND into 2-Input NOR (012x)
+AOI211        1,1,0,0,0,73         // 2-Input AND into 2-Input NOR (012x)
+AOI212        1,1,0,0,0,91         // 2-Input AND into 2-Input NOR (012x)
+
+AOI2110       1,1,0,0,0,91         // 2-Input AND into 3-Input NOR (012x)
+AOI2111       1,1,0,0,0,91         // 2-Input AND into 3-Input NOR (012x)
+AOI2112       1,1,0,0,0,127         // 2-Input AND into 3-Input NOR (012x)
+
+AOI220        1,1,0,0,0,91         // 2x2-Input AND into 2-Input NOR (012x)
+AOI221        1,1,0,0,0,91         // 2x2-Input AND into 2-Input NOR (012x)
+AOI222        1,1,0,0,0,109         // 2x2-Input AND into 2-Input NOR (012x)
+
+AOI310        1,1,0,0,0,91         // 3-Input AND into 2-Input NOR (012x)
+AOI311        1,1,0,0,0,91         // 3-Input AND into 2-Input NOR (012x)
+AOI312        1,1,0,0,0,109         // 3-Input AND into 2-Input NOR (012x)
+
+BUFE2         1,1,0,0,0,146         // Tri-State Buffer with active high enable (2468ACFx)
+BUFE4         1,1,0,0,0,164         // Tri-State Buffer with active high enable (2468ACFx)
+BUFE6         1,1,0,0,0,182         // Tri-State Buffer with active high enable (2468ACFx)
+BUFE8         1,1,0,0,0,255         // Tri-State Buffer with active high enable (2468ACFx)
+//BUFE10        1,1,0,0,00000         // Tri-State Buffer with active high enable (2468ACFx)
+//BUFE12        1,1,0,0,00000         // Tri-State Buffer with active high enable (2468ACFx)
+//BUFE15        1,1,0,0,00000         // Tri-State Buffer with active high enable (2468ACFx)
+
+BUFT2         1,1,0,0,0,146         // Tri-State Buffer with active low enable (2468ACFx)
+BUFT4         1,1,0,0,0,164         // Tri-State Buffer with active low enable (2468ACFx)
+BUFT6         1,1,0,0,0,182         // Tri-State Buffer with active low enable (2468ACFx)
+BUFT8         1,1,0,0,0,255         // Tri-State Buffer with active low enable (2468ACFx)
+//BUFT10        1,1,0,0,00000         // Tri-State Buffer with active low enable (2468ACFx)
+//BUFT12        1,1,0,0,00000         // Tri-State Buffer with active low enable (2468ACFx)
+//BUFT15        1,1,0,0,00000         // Tri-State Buffer with active low enable (2468ACFx)
+
+BUF2          1,1,0,0,0,55         // Buffer (2468CFx)
+BUF4          1,1,0,0,0,73         // Buffer (2468CFx)
+BUF6          1,1,0,0,0,73         // Buffer (2468CFx)
+BUF8          1,1,0,0,0,91         // Buffer (2468CFx)
+//BUF12         1,1,0,0,00000         // Buffer (2468CFx)
+//BUF15         1,1,0,0,00000         // Buffer (2468CFx)
+
+BUSHD         1,1,0,0,0,55         // Busholder
+
+CLKBU2        1,1,0,0,0,55         // Symmetrical Buffer for clock tree synthesis (2468CFx)
+CLKBU4        1,1,0,0,0,73         // Symmetrical Buffer for clock tree synthesis (2468CFx)
+CLKBU6        1,1,0,0,0,73         // Symmetrical Buffer for clock tree synthesis (2468CFx)
+CLKBU8        1,1,0,0,0,91         // Symmetrical Buffer for clock tree synthesis (2468CFx)
+CLKBU12       1,1,0,0,0,109         // Symmetrical Buffer for clock tree synthesis (2468CFx)
+CLKBU15       1,1,0,0,0,146         // Symmetrical Buffer for clock tree synthesis (2468CFx)
+
+CLKIN0        1,1,0,0,0,36         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN1        1,1,0,0,0,36         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN2        1,1,0,0,0,36         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN3        1,1,0,0,0,36         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN4        1,1,0,0,0,55         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN6        1,1,0,0,0,55         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN8        1,1,0,0,0,73         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN10       1,1,0,0,0,91         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN12       1,1,0,0,0,91         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+CLKIN15       1,1,0,0,0,109         // Symmetrical Inverter for clock tree synthesis (0123468ACFx)
+
+DF1           1,1,0,0,0,273         // D-Type Flip Flop (13x)
+DF3           1,1,0,0,0,273         // D-Type Flip Flop (13x)
+
+DFC1          1,1,0,0,0,310         // D-Type Flip Flop with active low clear (13x)
+DFC3          1,1,0,0,0,310         // D-Type Flip Flop with active low clear (13x)
+
+DFCP1         1,1,0,0,0,328         // D-Type Flip Flop with active low clear and preset (13x)
+DFCP3         1,1,0,0,0,328         // D-Type Flip Flop with active low clear and preset (13x)
+
+DFP1          1,1,0,0,0,310         // D-Type Flip Flop with active low preset (13x)
+DFP3          1,1,0,0,0,310         // D-Type Flip Flop with active low preset (13x)
+
+DFS1          1,1,0,0,0,364         // Scan D-Type Flip Flop (13x)
+DFS3          1,1,0,0,0,382         // Scan D-Type Flip Flop (13x)
+
+DFSC1         1,1,0,0,0,382         // Scan D-Type Flip Flop with active low clear (13x)
+DFSC3         1,1,0,0,0,401         // Scan D-Type Flip Flop with active low clear (13x)
+
+DFSCP1        1,1,0,0,0,401         // Scan D-Type Flip Flop with active low clear and preset (13x)
+DFSCP3        1,1,0,0,0,419         // Scan D-Type Flip Flop with active low clear and preset (13x)
+
+DFSP1         1,1,0,0,0,382         // Scan D-Type Flip Flop with active low preset (13x)
+DFSP3         1,1,0,0,0,401         // Scan D-Type Flip Flop with active low preset (13x)
+
+DFE1          1,1,0,0,0,328         // D-Type Flip Flop with active high enable (13x)
+DFE3          1,1,0,0,0,346         // D-Type Flip Flop with active high enable (13x)
+
+DFEC1         1,1,0,0,0,346         // D-Type Flip Flop with active high enable and active low clear (13x)
+DFEC3         1,1,0,0,0,364         // D-Type Flip Flop with active high enable and active low clear (13x)
+
+DFECP1        1,1,0,0,0,382         // D-Type Flip Flop with active high enable, active low clear and preset (13x)
+DFECP3        1,1,0,0,0,401         // D-Type Flip Flop with active high enable, active low clear and preset (13x)
+
+DFEP1         1,1,0,0,0,346         // D-Type Flip Flop with active high enable and active low preset (13x)
+DFEP3         1,1,0,0,0,364         // D-Type Flip Flop with active high enable and active low preset (13x)
+
+DFSE1         1,1,0,0,0,419         // Scan D-Type Flip Flop with active high enable (13x)
+DFSE3         1,1,0,0,0,437         // Scan D-Type Flip Flop with active high enable (13x)
+
+DFSEC1        1,1,0,0,0,437         // Scan D-Type Flip Flop with active high enable and active low clear (13x)
+DFSEC3        1,1,0,0,0,455         // Scan D-Type Flip Flop with active high enable and active low clear (13x)
+
+DFSECP1       1,1,0,0,0,455         // Scan D-Type Flip Flop with active high enable, active low clear and preset (13x)
+DFSECP3       1,1,0,0,0,473         // Scan D-Type Flip Flop with active high enable, active low clear and preset (13x)
+
+DFSEP1        1,1,0,0,0,437         // Scan D-Type Flip Flop with active high enable and active low preset (13x)
+DFSEP3        1,1,0,0,0,455         // Scan D-Type Flip Flop with active high enable and active low preset (13x)
+
+DL1           1,1,0,0,0,200         // Data Latch (13x)
+DL3           1,1,0,0,0,200         // Data Latch (13x)
+
+DLC1          1,1,0,0,0,219         // Data Latch with active low clear (13x)
+DLC3          1,1,0,0,0,219         // Data Latch with active low clear (13x)
+
+DLCP1         1,1,0,0,0,237         // Data Latch with active low clear and preset (13x)
+DLCP3         1,1,0,0,0,237         // Data Latch with active low clear and preset (13x)
+
+DLP1          1,1,0,0,0,200         // Data Latch with active low preset (13x)
+DLP3          1,1,0,0,0,200         // Data Latch with active low preset (13x)
+
+DLQ1          1,1,0,0,0,182         // Data Latch with Q-output only (13x)
+DLQ3          1,1,0,0,0,182         // Data Latch with Q-output only (13x)
+
+DLCQ1         1,1,0,0,0,182         // Data Latch with Q-output only and active low clear (13x)
+DLCQ3         1,1,0,0,0,182         // Data Latch with Q-output only and active low clear (13x)
+
+DLCPQ1        1,1,0,0,0,200         // Data Latch with Q-output only, active low clear and preset (13x)
+DLCPQ3        1,1,0,0,0,200         // Data Latch with Q-output only, active low clear and preset (13x)
+
+DLPQ1         1,1,0,0,0,182         // Data Latch with Q-output only and active low preset (13x)
+DLPQ3         1,1,0,0,0,182         // Data Latch with Q-output only and active low preset (13x)
+
+DLY12         1,1,0,0,0,164         // Single Delay (2x)
+DLY22         1,1,0,0,0,219         // Double Delay (2x)
+DLY32         1,1,0,0,0,310         // Triple Delay (2x)
+DLY42         1,1,0,0,0,401         // Quadr. Delay (2x)
+
+IMAJ30        1,1,0,0,0,109         // Inverting Majority ~(AB+AC+BC), (01x)
+IMAJ31        1,1,0,0,0,109         // Inverting Majority ~(AB+AC+BC), (01x)
+
+IMUX20        1,1,0,0,0,91         // Inverting 2:1 Multiplexer (01234x)
+IMUX21        1,1,0,0,0,91         // Inverting 2:1 Multiplexer (01234x)
+IMUX22        1,1,0,0,0,146         // Inverting 2:1 Multiplexer (01234x)
+IMUX23        1,1,0,0,0,146         // Inverting 2:1 Multiplexer (01234x)
+IMUX24        1,1,0,0,0,182         // Inverting 2:1 Multiplexer (01234x)
+
+IMUX30        1,1,0,0,0,182         // nverting 3:1 Multiplexer (0123x)
+IMUX31        1,1,0,0,0,219         // nverting 3:1 Multiplexer (0123x)
+IMUX32        1,1,0,0,0,237         // nverting 3:1 Multiplexer (0123x)
+IMUX33        1,1,0,0,0,364         // nverting 3:1 Multiplexer (0123x)
+
+IMUX40        1,1,0,0,0,219         // Inverting 4:1 Multiplexer (012x)
+IMUX41        1,1,0,0,0,255         // Inverting 4:1 Multiplexer (012x)
+IMUX42        1,1,0,0,0,364         // Inverting 4:1 Multiplexer (012x)
+
+INV0          1,1,0,0,0,36         // Inverter (0123468ACFx)
+INV1          1,1,0,0,0,36         // Inverter (0123468ACFx)
+INV2          1,1,0,0,0,36         // Inverter (0123468ACFx)
+INV3          1,1,0,0,0,36         // Inverter (0123468ACFx)
+INV4          1,1,0,0,0,55         // Inverter (0123468ACFx)
+INV6          1,1,0,0,0,55         // Inverter (0123468ACFx)
+INV8          1,1,0,0,0,73         // Inverter (0123468ACFx)
+INV10         1,1,0,0,0,91         // Inverter (0123468ACFx)
+INV12         1,1,0,0,0,91         // Inverter (0123468ACFx)
+INV15         1,1,0,0,0,109         // Inverter (0123468ACFx)
+
+JK1           1,1,0,0,0,346         // JK Flip-Flop (13x)
+JK3           1,1,0,0,0,346         // JK Flip-Flop (13x)
+
+JKC1          1,1,0,0,0,364         // JK Flip-Flop with active low clear (13x)
+JKC3          1,1,0,0,0,364         // JK Flip-Flop with active low clear (13x)
+
+JKCP1         1,1,0,0,0,382         // JK Flip-Flop with active low clear and preset (13x)
+JKCP3         1,1,0,0,0,382         // JK Flip-Flop with active low clear and preset (13x)
+
+JKP1          1,1,0,0,0,364         // JK Flip-Flop with active low preset (13x)
+JKP3          1,1,0,0,0,364         // JK Flip-Flop with active low preset (13x)
+
+JKS1          1,1,0,0,0,437         // Scan JK Flip-Flop (13x)
+JKS3          1,1,0,0,0,437         // Scan JK Flip-Flop (13x)
+
+JKSC1         1,1,0,0,0,455         // Scan JK Flip-Flop with active low clear (13x)
+JKSC3         1,1,0,0,0,455         // Scan JK Flip-Flop with active low clear (13x)
+
+JKSCP1        1,1,0,0,0,473         // Scan JK Flip-Flop with active low clear and preset (13x)
+JKSCP3        1,1,0,0,0,473         // Scan JK Flip-Flop with active low clear and preset (13x)
+
+JKSP1         1,1,0,0,0,455         // Scan JK Flip-Flop with active low preset (13x)
+JKSP3         1,1,0,0,0,455         // Scan JK Flip-Flop with active low preset (13x)
+
+TIE0          1,1,0,0,0,0         // Tie-Down to logic Low level
+TIE1          1,1,0,0,0,0         // Tie-Up to logic High Level
+
+MAJ31         1,1,0,0,0,109         // Majority (AB+AC+BC), (12x)
+MAJ32         1,1,0,0,0,127         // Majority (AB+AC+BC), (12x)
+
+MUX21         1,1,0,0,0,109         // 2:1 Multiplexer (1246x)
+MUX22         1,1,0,0,0,109         // 2:1 Multiplexer (1246x)
+MUX24         1,1,0,0,0,182         // 2:1 Multiplexer (1246x)
+MUX26         1,1,0,0,0,182         // 2:1 Multiplexer (1246x)
+
+MUX31         1,1,0,0,0,200         // 3:1 Multiplexer (1234x)
+MUX32         1,1,0,0,0,237         // 3:1 Multiplexer (1234x)
+MUX34         1,1,0,0,0,291         // 3:1 Multiplexer (1234x)
+MUX36         1,1,0,0,0,401         // 3:1 Multiplexer (1234x)
+
+MUX41         1,1,0,0,0,237         // 4:1 Multiplexer (123x)
+MUX42         1,1,0,0,0,273         // 4:1 Multiplexer (123x)
+MUX43         1,1,0,0,0,382         // 4:1 Multiplexer (123x)
+
+NAND20        1,1,0,0,0,55         // 2-Input NAND (0123468x)
+NAND21        1,1,0,0,0,55         // 2-Input NAND (0123468x)
+NAND22        1,1,0,0,0,55         // 2-Input NAND (0123468x)
+NAND23        1,1,0,0,0,91         // 2-Input NAND (0123468x)
+NAND24        1,1,0,0,0,109         // 2-Input NAND (0123468x)
+NAND26        1,1,0,0,0,164         // 2-Input NAND (0123468x)
+NAND28        1,1,0,0,0,182         // 2-Input NAND (0123468x)
+
+NAND30        1,1,0,0,0,73         // 3-Input NAND (01234x)
+NAND31        1,1,0,0,0,73         // 3-Input NAND (01234x)
+NAND32        1,1,0,0,0,127         // 3-Input NAND (01234x)
+NAND33        1,1,0,0,0,127         // 3-Input NAND (01234x)
+NAND34        1,1,0,0,0,164         // 3-Input NAND (01234x)
+
+NAND40        1,1,0,0,0,91         // 4-Input NAND (0123x)
+NAND41        1,1,0,0,0,91         // 4-Input NAND (0123x)
+NAND42        1,1,0,0,0,146         // 4-Input NAND (0123x)
+NAND43        1,1,0,0,0,200         // 4-Input NAND (0123x)
+
+NOR20         1,1,0,0,0,55         // 2-Input NOR (01234x)
+NOR21         1,1,0,0,0,55         // 2-Input NOR (01234x)
+NOR22         1,1,0,0,0,73         // 2-Input NOR (01234x)
+NOR23         1,1,0,0,0,91         // 2-Input NOR (01234x)
+NOR24         1,1,0,0,0,109         // 2-Input NOR (01234x)
+
+NOR30         1,1,0,0,0,73         // 3-Input NOR (0123x)
+NOR31         1,1,0,0,0,73         // 3-Input NOR (0123x)
+NOR32         1,1,0,0,0,91         // 3-Input NOR (0123x)
+NOR33         1,1,0,0,0,127         // 3-Input NOR (0123x)
+
+NOR40         1,1,0,0,0,73         // 3-Input NOR (012x)
+NOR41         1,1,0,0,0,91         // 3-Input NOR (012x)
+NOR42         1,1,0,0,0,164         // 3-Input NOR (012x)
+
+OAI210        1,1,0,0,0,73         // 2-Input OR into 2-Input NAND (012x)
+OAI211        1,1,0,0,0,73         // 2-Input OR into 2-Input NAND (012x)
+OAI212        1,1,0,0,0,73         // 2-Input OR into 2-Input NAND (012x)
+
+OAI2110       1,1,0,0,0,91         // 2-Input OR into 3-Input NAND (012x)
+OAI2111       1,1,0,0,0,91         // 2-Input OR into 3-Input NAND (012x)
+OAI2112       1,1,0,0,0,146         // 2-Input OR into 3-Input NAND (012x)
+
+OAI220        1,1,0,0,0,91         // 2x2-Input OR into 2-Input NAND (012x)
+OAI221        1,1,0,0,0,91         // 2x2-Input OR into 2-Input NAND (012x)
+OAI222        1,1,0,0,0,91         // 2x2-Input OR into 2-Input NAND (012x)
+
+OAI310        1,1,0,0,0,91         // 3-Input OR into 2-Input NAND (012x)
+OAI311        1,1,0,0,0,91         // 3-Input OR into 2-Input NAND (012x)
+OAI312        1,1,0,0,0,109         // 3-Input OR into 2-Input NAND (012x)
+
+TFEC1         1,1,0,0,0,346         // Toggle Flip Flop with active high enable and active low clear (13x)
+TFEC3         1,1,0,0,0,346         // Toggle Flip Flop with active high enable and active low clear (13x)
+
+TFECP1        1,1,0,0,0,364         // Toggle Flip Flop with active high enable, active low clear and preset (13x)
+TFECP3        1,1,0,0,0,364         // Toggle Flip Flop with active high enable, active low clear and preset (13x)
+
+TFEP1         1,1,0,0,0,346         // Toggle Flip Flop with active high enable and active low preset (13x)
+TFEP3         1,1,0,0,0,346         // Toggle Flip Flop with active high enable and active low preset (13x)
+
+TFSEC1        1,1,0,0,0,437         // Scan Toggle Flip Flop with active high enable and active low clear (13x)
+TFSEC3        1,1,0,0,0,437         // Scan Toggle Flip Flop with active high enable and active low clear (13x)
+
+TFSECP1       1,1,0,0,0,455         // Scan Toggle Flip Flop with active high enable, active low clear and preset (13x)
+TFSECP3       1,1,0,0,0,455         // Scan Toggle Flip Flop with active high enable, active low clear and preset (13x)
+
+TFSEP1        1,1,0,0,0,437         // Scan Toggle Flip Flop with active high enable and active low preset (13x)
+TFSEP3        1,1,0,0,0,437         // Scan Toggle Flip Flop with active high enable and active low preset (13x)
+
+TFC1          1,1,0,0,0,291         // Toggle Flip Flop with active low clear (13x)
+TFC3          1,1,0,0,0,291         // Toggle Flip Flop with active low clear (13x)
+
+TFCP1         1,1,0,0,0,310         // Toggle Flip Flop with active low clear and preset (13x)
+TFCP3         1,1,0,0,0,310         // Toggle Flip Flop with active low clear and preset (13x)
+
+TFP1          1,1,0,0,0,291         // Toggle Flip Flop with active low preset (13x)
+TFP3          1,1,0,0,0,291         // Toggle Flip Flop with active low preset (13x)
+
+TFSC1         1,1,0,0,0,346         // Scan Toggle Flip Flop with active low clear (13x)
+TFSC3         1,1,0,0,0,364         // Scan Toggle Flip Flop with active low clear (13x)
+
+TFSCP1        1,1,0,0,0,364         // Scan Toggle Flip Flop with active low clear and preset (13x)
+TFSCP3        1,1,0,0,0,382         // Scan Toggle Flip Flop with active low clear and preset (13x)
+
+TFSP1         1,1,0,0,0,346         // Scan Toggle Flip Flop with active low preset (13x)
+TFSP3         1,1,0,0,0,364         // Scan Toggle Flip Flop with active low preset (13x)
+
+XOR20         1,1,0,0,0,127         // 2-input XOR (012x)
+XOR21         1,1,0,0,0,127         // 2-input XOR (012x)
+XOR22         1,1,0,0,0,200         // 2-input XOR (012x)
+
+XOR30         1,1,0,0,0,200         // 3-input XOR (01x)
+XOR31         1,1,0,0,0,200         // 3-input XOR (01x)
+
+XOR40         1,1,0,0,0,273         // 4-input XOR (01x)
+XOR41         1,1,0,0,0,273         // 4-input XOR (01x)
+
+XNR20         1,1,0,0,0,109         // 2-input XNOR (012x)
+XNR21         1,1,0,0,0,109         // 2-input XNOR (012x)
+XNR22         1,1,0,0,0,200         // 2-input XNOR (012x)
+
+XNR30         1,1,0,0,0,200         // 3-input XNOR (01x)
+XNR31         1,1,0,0,0,200         // 3-input XNOR (01x)
+
+XNR40         1,1,0,0,0,273         // 4-input XNOR (01x)
+XNR41         1,1,0,0,0,273         // 4-input XNOR (01x)
+
+empty         0,0,0,0,0,0         // Empty module connecting input to output
+spinv         1,0,0,0,0,0         // Spacer Inverter (12348x)

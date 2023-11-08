@@ -1,0 +1,5 @@
+ReadGCFTimingLibraries c35b43.3V.gcf
+ReadVerilog aes_core_syn_sr.v
+TopLevelCell core
+WriteSDFDelays aes_core_syn_sr.sdf
+quit

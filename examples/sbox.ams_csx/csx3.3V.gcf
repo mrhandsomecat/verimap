@@ -1,0 +1,18 @@
+(gcf
+  (header
+  (version "1.2")
+  (TIME_SCALE 1.0E-9)
+  (CAP_SCALE 1.0E-12)
+ )
+  (globals
+    (globals_subset environment
+      (extension "CTLF_FILES" (
+          /home/apps00/Europractice/v12/AMS_3.30/artist/HK_0.35/HRDLIB/timing-3.3V.ctlf
+	         /home/apps00/Europractice/v12/AMS_3.30/artist/HK_0.35/IOLIB_3M/timing-3.3V.ctlf
+	         /home/apps00/Europractice/v12/AMS_3.30/artist/HK_0.35/IOLIBV5_3M/timing-3.3V.ctlf
+        )  
+      )  
+      (operating_conditions "typical" 0.0 3.3 25.0)
+    )
+  )  
+)
